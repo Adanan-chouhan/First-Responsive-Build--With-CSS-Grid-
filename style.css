@@ -1,0 +1,266 @@
+ /* variables */
+
+      /* reset */
+      body,p,a,ul,li{
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      li{
+        list-style-type: none;
+      }
+
+      /* base styles */
+      body{
+        background-color: darkblue;
+        overflow-x: hidden;
+        font-size: 20px;
+      }
+      .button{
+        background: none;
+        border: 2px solid darkgoldenrod;
+        color:darkgoldenrod;
+        padding: 6px 12px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        box-shadow: 1px 2px 3px black;
+        display: inline-block;
+      }
+      .button:hover{
+        color:rgba(0, 0, 0, 0.482);
+        background: darkgoldenrod;
+      }
+      input,textarea{
+        background: darkblue;
+        margin:10 16;
+        border-radius: 20px;
+        border:  2px solid rgba(137, 43, 226, 0.373);
+        color:antiquewhite
+      }
+
+      /* fonts */
+      h1,h2,h3,h4{
+        color:aliceblue;
+      }
+      p,a,li{
+        color:rgba(147, 112, 216, 0.912);
+      }
+      h1,h3{
+        font-size: 1em;
+      }
+      h4{
+        font-size: 1.1em;
+      }
+      .leading{
+        font-size: 1.1em;
+      }
+    
+
+      /* mobail styles */
+      .grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-row: 1;
+    grid-gap: 10px;
+  }
+
+  .site-nav{
+    margin: 0 20px;
+  }
+  .site-nav ul{
+    display: none;
+  }
+  .site-nav h1{
+    grid-template-columns: 1/4;
+    grid-row: 1;
+    padding-bottom: 10px;
+    border-bottom: 3px solid  darkgoldenrod;;
+  }
+  #welcome{
+    padding: 0 20px 20px 20px ;
+    display: grid;
+  }
+  .welcome-text{
+    grid-column: 1/6;
+  }
+.welcome.img{
+  grid-column: 6/9;
+  width: 200%;
+}
+.welcome.img img{
+  width: 200%;
+}
+.welcome-text a{
+    margin: 20px 0;
+  }
+  #portfolio{
+    background-image: url(./imges/square_bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 30px 20px;
+  }
+  #portfolio h3{
+    padding: 30px 20px;
+    text-align: center;
+  }
+  .projects a {
+      grid-column: 1/9;
+      margin: 20px 0;
+      display: flex;
+  
+  }
+  .projects a * { 
+      margin: 0 20px;
+      max-width: 40%;
+      align-self: center;
+  }
+  #skills{
+    background-image: url(./imges/square_bg.png);
+    padding: 30px 20px;
+  }
+  #skills h3{
+    padding: 30px 20px;
+    text-align: center;
+  }
+  #skills ul{
+    margin: 40px 0 ;
+  }
+  #skills li{
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.519);
+    grid-column: span 4;
+    text-align: center;
+  }
+  #skills img{
+    height: 80px;
+    margin: 10px auto;
+  }
+  #Contact{
+    padding: 30px 20px;
+    background-image: url(./imges/square_bg.png);
+  }
+  #Contact h3,#contact h4, #Contact p{
+    text-align: center;
+    margin-bottom: 0;
+  }
+  #Contact form{
+    width: 80%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+ }
+ #Contact input, #Contact textarea{
+  width: 100%;
+  margin: 10px;
+ }
+ #Contact button{
+  text-align: center;
+  margin: 10px;
+ }
+
+      /* small tablet stayle */
+      @media screen and(min-width: 620px){
+        .welcome-text{
+    grid-column: 1/5;
+  }
+.welcome.img{
+  grid-column: 5/9; 
+}
+.welcome.img img{
+  width: 100%;
+}
+.projects{
+  margin-top: 40px;
+}
+.projects a {
+      grid-column: span 4;
+      display: block;
+      margin: 20px 0;
+    }
+    .projects a:last-child {
+      grid-column: 3/7;
+    }
+    .projects a * {
+      max-width: 60%;
+      margin: 10px 20%;
+    }
+    .projects h4 {
+      text-align: center;
+      color: #9994f7;
+    }
+    #skills {
+      padding: 30px 100px;
+    }
+    #contact .leading p {
+      text-align: center;
+      align-items: center;
+    }
+      }
+      
+      /* largest tablets & laptop styles */
+    @media screen and(min-width: 960px){
+      body{
+        font-size: 18px;
+      }
+    }
+
+    /* desktop stayles */
+    @media screen and(min-width:1200px){
+      body{
+        font-size: 20px;
+      }   
+    }
+    .projects{
+display: grid;
+grid-template-columns: repeat(12,1fr) ;
+grid-gap:30px;
+    }
+  .projects a{
+    text-align: center;
+  background: rgba(128, 128, 128, 0.853);
+  padding: 20px ;
+  }
+  .projects img{
+   width: 500px;
+    height: 350px;
+    width: 100%; 
+  }
+
+  .projects a:nth-child(1){
+   grid-column: 2/6;
+   grid-row:1;
+  }
+  .projects a:nth-child(2){
+   grid-column: 8/12;
+   grid-row:1;
+  } 
+  .projects a:nth-child(3){
+   grid-column: 5 /9;
+   grid-row:2;
+  }
+  .projects a * {
+      margin: 10px 10%;
+      max-width: 80%;
+  }
+  #skills {
+      padding: 30px 20px;
+  }
+    #skills ul {
+      margin: 40px auto;
+  
+    }
+    #skills li {
+      grid-column: span 2;
+    }
+ footer{
+  padding: 30px;
+  background-image: url(./imges/square_bg.png);
+ }
+ footer p{
+margin: 20px;
+ }
+ footer li{
+  text-align:center ;
+ }
+  
